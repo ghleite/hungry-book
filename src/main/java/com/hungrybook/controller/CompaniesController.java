@@ -14,8 +14,10 @@ public class CompaniesController {
 	
 	@RequestMapping("/companies")
 	public List<CompanyDto> companiesList() {
-		Company company = new Company(5418L, "VeganBurguer", "511569876");
-		return CompanyDto.convert(Arrays.asList(company, company));
+		Company companyOne = new Company(1L, "VBurguer", "25469832541");
+		Company companyTwo = new Company(2L, "ItalliRestorant", "433846213");
+
+		return CompanyDto.convert(Arrays.asList(companyOne, companyTwo));
 	}
 
 }
