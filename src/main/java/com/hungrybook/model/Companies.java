@@ -1,17 +1,15 @@
 package com.hungrybook.model;
 
-public class Company {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Companies {
 	
+	@Id
 	private Long id;
 	private String name;
 	private String cnpj;
-		
-	public Company(Long id, String name, String cnpj) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.cnpj = cnpj;
-	}
 	
 	public Long getId() {
 		return id;
@@ -49,7 +47,7 @@ public class Company {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Company other = (Company) obj;
+		Companies other = (Companies) obj;
 		if (cnpj == null) {
 			if (other.cnpj != null)
 				return false;

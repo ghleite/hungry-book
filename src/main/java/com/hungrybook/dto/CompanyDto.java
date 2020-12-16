@@ -3,13 +3,13 @@ package com.hungrybook.dto;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.hungrybook.model.Company;
+import com.hungrybook.model.Companies;
 
 public class CompanyDto {
 
 	private String name;
 	
-	public CompanyDto(Company company) {
+	public CompanyDto(Companies company) {
 		this.name = company.getName();
 	}	
 
@@ -21,7 +21,7 @@ public class CompanyDto {
 		this.name = name;
 	}
 
-	public static List<CompanyDto> convert(List<Company> companies) {
+	public static List<CompanyDto> convert(List<Companies> companies) {
 		return companies.stream().map(CompanyDto::new).collect(Collectors.toList());
 	}
 }
